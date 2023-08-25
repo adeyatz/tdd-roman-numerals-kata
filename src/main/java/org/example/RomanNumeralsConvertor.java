@@ -8,7 +8,16 @@ public class RomanNumeralsConvertor {
 
     public String convertArabicToRoman (int arabicNumber) {
         System.out.println("Num to convert:" + arabicNumber);
-        return "I";
+
+        int number = arabicNumber;
+        StringBuilder result = new StringBuilder();
+
+        while (number > 0) {
+            result.append("I");
+            number--;
+        }
+
+        return result.toString();
     }
 
 }
