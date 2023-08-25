@@ -7,7 +7,8 @@ public class RomanNumeralsConvertor {
     }
 
     public String convertArabicToRoman (int arabicNumber) {
-        return "";
+        System.out.println("Num to convert:" + arabicNumber);
+        return "I";
     }
 
 }

@@ -14,13 +14,10 @@ class RomanNumeralsConvertorTest
     public void checkTestWithCSVFile (int arabicNumber, String expectedRomanResult) {
 
         System.out.printf("Input: %d, Expected: %s\n", arabicNumber, expectedRomanResult);
-        /*
+
         RomanNumeralsConvertor convertor = new RomanNumeralsConvertor();
 
-        String expected = "I";
-
-        assertEquals (expected, convertor.convertArabicToRoman(1));
-         */
+        assertEquals (expectedRomanResult, convertor.convertArabicToRoman(arabicNumber));
     }
 
 }
