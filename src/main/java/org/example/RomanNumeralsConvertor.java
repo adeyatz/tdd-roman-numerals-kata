@@ -11,6 +11,8 @@ public class RomanNumeralsConvertor {
         romanNumeral.put(1, "I");
         romanNumeral.put(4, "IV");
         romanNumeral.put(5, "V");
+        romanNumeral.put(9, "IX");
+        romanNumeral.put(10, "X");
     }
 
     public RomanNumeralsConvertor () {
