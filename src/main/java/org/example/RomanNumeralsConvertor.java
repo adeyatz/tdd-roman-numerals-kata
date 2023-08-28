@@ -19,6 +19,8 @@ public class RomanNumeralsConvertor {
         romanNumeral.put(100, "C");
         romanNumeral.put(400, "CD");
         romanNumeral.put(500, "D");
+        romanNumeral.put(900, "CM");
+        romanNumeral.put(1000, "M");
     }
 
     public RomanNumeralsConvertor () {
