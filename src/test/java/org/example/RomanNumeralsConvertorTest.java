@@ -9,6 +9,28 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class RomanNumeralsConvertorTest
 {
+    @Test
+    public void checkInputValueZero () {
+        RomanNumeralsConvertor convertor = new RomanNumeralsConvertor();
+
+        assertEquals ("", convertor.convertArabicToRoman(0));
+    }
+
+    @Test
+    public void checkInputValueNegative () {
+        RomanNumeralsConvertor convertor = new RomanNumeralsConvertor();
+
+        assertEquals ("", convertor.convertArabicToRoman(-1));
+    }
+
+    @Test
+    public void checkInputValueGreaterThan3000 () {
+        RomanNumeralsConvertor convertor = new RomanNumeralsConvertor();
+
+        assertEquals ("", convertor.convertArabicToRoman(3001));
+    }
+
+
     @ParameterizedTest
     @CsvFileSource (resources = "/romanNumerals.csv")
     public void checkTestWithCSVFile (int arabicNumber, String expectedRomanResult) {
