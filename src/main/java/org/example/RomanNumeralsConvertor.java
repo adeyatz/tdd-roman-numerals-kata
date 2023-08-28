@@ -23,12 +23,8 @@ public class RomanNumeralsConvertor {
         romanNumeral.put(1000, "M");
     }
 
-    public RomanNumeralsConvertor () {
 
-    }
-
-    public String convertArabicToRoman (int arabicNumber) {
-        System.out.println("Num to convert:" + arabicNumber);
+    public static String convertArabicToRoman (int arabicNumber) {
 
         if ((arabicNumber > 3000) || (arabicNumber < 1))
             return "";

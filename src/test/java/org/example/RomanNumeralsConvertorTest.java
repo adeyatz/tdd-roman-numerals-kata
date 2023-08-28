@@ -11,35 +11,27 @@ class RomanNumeralsConvertorTest
 {
     @Test
     public void checkInputValueZero () {
-        RomanNumeralsConvertor convertor = new RomanNumeralsConvertor();
-
-        assertEquals ("", convertor.convertArabicToRoman(0));
+        assertEquals("", RomanNumeralsConvertor.convertArabicToRoman(0));
     }
 
     @Test
     public void checkInputValueNegative () {
-        RomanNumeralsConvertor convertor = new RomanNumeralsConvertor();
-
-        assertEquals ("", convertor.convertArabicToRoman(-1));
+        assertEquals ("", RomanNumeralsConvertor.convertArabicToRoman(-1));
     }
 
     @Test
     public void checkInputValueGreaterThan3000 () {
-        RomanNumeralsConvertor convertor = new RomanNumeralsConvertor();
-
-        assertEquals ("", convertor.convertArabicToRoman(3001));
+        assertEquals ("", RomanNumeralsConvertor.convertArabicToRoman(3001));
     }
 
 
     @ParameterizedTest
     @CsvFileSource (resources = "/romanNumerals.csv")
-    public void checkTestWithCSVFile (int arabicNumber, String expectedRomanResult) {
+    public void checkInputvsExpectedFromCSVFile (int arabicNumber, String expectedRomanResult) {
 
         System.out.printf("Input: %d, Expected: %s\n", arabicNumber, expectedRomanResult);
 
-        RomanNumeralsConvertor convertor = new RomanNumeralsConvertor();
-
-        assertEquals (expectedRomanResult, convertor.convertArabicToRoman(arabicNumber));
+        assertEquals (expectedRomanResult, RomanNumeralsConvertor.convertArabicToRoman(arabicNumber));
     }
 
 }
